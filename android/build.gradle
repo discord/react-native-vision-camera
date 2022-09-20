@@ -45,7 +45,8 @@ def CMAKE_NODE_MODULES_DIR = project.getProjectDir().getParentFile().getParent()
 def reactProperties = new Properties()
 file("$nodeModules/react-native/ReactAndroid/gradle.properties").withInputStream { reactProperties.load(it) }
 def REACT_NATIVE_FULL_VERSION = reactProperties.getProperty("VERSION_NAME")
-def REACT_NATIVE_VERSION = reactProperties.getProperty("VERSION_NAME").split("\\.")[1].toInteger()
+// Discord's RN version looks like this: VERSION_CODE_REACT_NATIVE=0.68-discord-5
+def REACT_NATIVE_VERSION = reactProperties.getProperty("VERSION_NAME").split("\\.")[1].split("-")[0].toInteger()
 
 def FOR_HERMES = System.getenv("FOR_HERMES") == "True"
 rootProject.getSubprojects().forEach({project ->
