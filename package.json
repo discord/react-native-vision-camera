@@ -1,5 +1,5 @@
 {
-  "name": "react-native-vision-camera",
+  "name": "@discord/react-native-vision-camera",
   "version": "2.15.4",
   "description": "The Camera library that sees the vision.",
   "main": "lib/commonjs/index",
@@ -58,16 +58,13 @@
     "qr-code",
     "scanner"
   ],
-  "repository": "https://github.com/mrousavy/react-native-vision-camera",
+  "repository": "https://github.com/discord/react-native-vision-camera",
   "author": "Marc Rousavy <marcrousavy@hotmail.com> (https://github.com/mrousavy)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mrousavy/react-native-vision-camera/issues"
   },
   "homepage": "https://mrousavy.github.io/react-native-vision-camera/",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "devDependencies": {
     "@expo/config-plugins": "^4.0.0",
     "@jamesacarr/eslint-formatter-github-actions": "^0.1.0",
