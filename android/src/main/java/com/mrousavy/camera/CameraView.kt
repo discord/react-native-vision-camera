@@ -299,6 +299,8 @@ class CameraView(context: Context, private val frameProcessorThread: ExecutorSer
       isMounted = true
       invokeOnViewReady()
     }
+    // workaround for https://issuetracker.google.com/issues/147354615, preview must be bound on resume
+    update(propsThatRequireSessionReconfiguration)
   }
 
   override fun onDetachedFromWindow() {
