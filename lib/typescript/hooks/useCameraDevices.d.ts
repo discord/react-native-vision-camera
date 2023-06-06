@@ -1,6 +1,6 @@
 import type { CameraPosition } from '../CameraPosition';
 import { CameraDevice, LogicalCameraDeviceType, PhysicalCameraDeviceType } from '../CameraDevice';
-declare type CameraDevices = {
+export declare type CameraDevices = {
     [key in CameraPosition]: CameraDevice | undefined;
 };
 /**
@@ -30,4 +30,3 @@ export declare function useCameraDevices(): CameraDevices;
  * ```
  */
 export declare function useCameraDevices(deviceType: PhysicalCameraDeviceType | LogicalCameraDeviceType): CameraDevices;
-export {};
